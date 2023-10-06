@@ -6,6 +6,7 @@ import 'package:yoo/splash_screen.dart';
 
 void main() {
   runApp(MyApp());
+  //code ja likhc shb bujte hbe...mandatory
 }
 
 class MyApp extends StatelessWidget {
