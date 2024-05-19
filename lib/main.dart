@@ -335,14 +335,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
 
                   //any day focus
-                  selectedDayPredicate: (day) {
-                    return isSameDay(_selectedDay, day);
-                  },
+                  selectedDayPredicate: (day) => isSameDay(day, _selectedDay),
                   onDaySelected: (selectedDay, focusedDay) {
                     if (!isSameDay(_selectedDay, selectedDay)) {
                       setState(() {
                         _selectedDay = selectedDay;
-                        _focusedDay = focusedDay;
                       });
                     }
                   },
@@ -355,7 +352,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   availableGestures: AvailableGestures.all,
                   focusedDay: _focusedDay,
                   firstDay: DateTime.utc(2022),
-                  lastDay: DateTime.utc(2024, 4, 25)),
+                  lastDay: DateTime.utc(DateTime.now().year+1, 1, 1)),
             ),
           ],
         ),
